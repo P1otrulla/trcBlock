@@ -1,0 +1,60 @@
+inventory:
+  # nazwa gui pod /block
+  name: "&6Wymiana przedmiotow na bloki"
+
+  # wielkosc gui (9, 18, 27, 36, 45, 54)
+  size: 27
+
+  # wypelniacz
+  filler:
+    # czy ma byc wlaczony?
+    enable: true
+
+    # item ktory wypelni gui
+    item: STAINED_GLASS_PANE
+
+    # data itemu dla szkla, welny itp
+    # dla itemow bez koloru ustaw 0
+    data: 7
+
+changers:
+  # id (kazde musi byc inne)
+  diamond:
+    # z jakiego itemu wymieniac
+    from:
+      item: DIAMOND
+      amount: 9
+      data: 0
+
+    # na jaki item wymienic
+    to:
+      item: DIAMOND_BLOCK
+      amount: 1
+      data: 0
+
+    # ustawienia gui
+    inventory:
+      # nazwa itemu
+      name: "&bDiament"
+
+      # item
+      item: DIAMOND
+
+      # data itemu
+      data: 0
+
+      # pozycja w gui (mozliwe od 0 do 26 zalezne od 'inventory.size')
+      slot: 11
+
+      # opis itemu
+      lore:
+        - "&8× &7Kliknij aby zamienic &6Diamenty&7,"
+        - "&8× &7na &6bloki diamentow&7."
+
+    # wiadomosci
+    messages:
+      # wiadomosc przy braku itemu
+      noItem: "&4Blad: &cNie masz wystarczajaco diamentow!"
+
+      # wiadomosc przy wymianie ({ITEMS} - ilosc zabranego itemu, {BLOCKS} - ilosc dodanych blokow)
+      changed: "&aGratulacje! &ePrzerobiles &7{ITEMS} &ediamentow na &7{BLOCKS} &ebloki diamentowe&7!"
